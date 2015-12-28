@@ -1,5 +1,16 @@
-<ion-view view-title="line">
+<ion-view>
     <ion-content>
-	    <p>This is the line page</p>
+	    <div class="search">
+	    	<p>{{defaultLocation}}</p>
+	    </div>
+	    <ion-list>
+		    <ion-item ng-repeat="line in fakeLines">
+			    <p>{{line.name}}</p>
+			    <img src="img/ionic.png">
+			    <button class="btn btn-success" ui-sref="tab.lineDetail({lineID: line.id})">
+			    	路线预定
+			    </button>
+			</ion-item>
+		</ion-list>
 	</ion-content>
 </ion-view>
