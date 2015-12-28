@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('memeoneApp', ['ionic'])
+angular.module('memeoneApp', ['ionic', 'oc.lazyLoad', 'ngCordova', 'journeyModule', 'lineModule', 'memberModule'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -42,36 +42,6 @@ angular.module('memeoneApp', ['ionic'])
   })
 
   // Each tab has its own nav history stack:
-
-  .state('tab.journey', {
-    url: '/journey',
-    views: {
-      'tab-journey': {
-        templateUrl: 'views/journey/journey.html',
-        controller: 'journeyCtrl'
-      }
-    }
-  })
-
-  .state('tab.line', {
-      url: '/line',
-      views: {
-        'tab-line': {
-          templateUrl: 'views/line/line.html',
-          controller: 'lineCtrl'
-        }
-      }
-    })
-
-  .state('tab.member', {
-    url: '/member',
-    views: {
-      'tab-member': {
-        templateUrl: 'views/member/member.html',
-        controller: 'memberCtrl'
-      }
-    }
-  });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/line');

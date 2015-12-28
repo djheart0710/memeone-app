@@ -1,4 +1,4 @@
-angular.module('memeoneApp')
+angular.module('memberModule')
 	.controller('memberCtrl', function ($scope){
 		// 
 	});
