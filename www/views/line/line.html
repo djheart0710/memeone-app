@@ -1,15 +1,28 @@
+<!-- 顶部搜索框 -->
+<div class="search-box">
+	<div class="input-group">
+		<input type="text" class="form-control" placeholder="输入景点名称" />
+		<span class="input-group-btn">
+			<button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+		</span>
+	</div>
+</div>
+<!-- 推荐线路展示 -->
 <ion-view>
     <ion-content>
-	    <div class="search">
-	    	<p>{{defaultLocation}}</p>
-	    </div>
 	    <ion-list>
 		    <ion-item ng-repeat="line in fakeLines">
-			    <p>{{line.name}}</p>
-			    <img src="img/ionic.png">
-			    <button class="btn btn-success" ui-sref="tab.lineDetail({lineID: line.id})">
-			    	路线预定
-			    </button>
+			    <div class="line-box">
+			    	<div class="line-img">
+			    		<img src="img/ionic.png">
+			    	</div>
+			    	<div class="lime-description">
+			    		<h3>{{line.name}}</h3>
+			    		<button class="btn btn-success" ui-sref="tab.lineDetail({lineID: line.id})">
+			    			路线预定
+			    		</button>
+			    	</div>
+			    </div>
 			</ion-item>
 		</ion-list>
 	</ion-content>

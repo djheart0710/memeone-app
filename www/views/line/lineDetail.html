@@ -1,6 +1,31 @@
 <ion-view>
     <ion-content>
-	    <p>进入路线预定页面</p>
-	    <button class="btn btn-success" ui-sref="tab.order">立即预定</button>
+	    <!-- 路线图片轮播 -->
+	    <div class="">
+	    	<uib-carousel interval="myInterval" no-wrap="">
+		    	<uib-slide ng-repeat="slide in slides" active="">
+			    	<img ng-src="{{slide.img}}">
+			    </uib-slide>
+		    </uib-carousel>
+		    <!-- 路线信息 -->
+		    <p>路线名称</p>
+		    <p>价格</p>
+		    <p>出发点</p>
+		    <p>目的地</p>
+	    </div>
+	    <!-- 选择出发日期 -->
+	    <div class="">
+
+	    </div>
+	    <!-- 套餐选择 -->
+	    <div class="">
+	    </div>
+	    <!-- 优惠信息 -->
+	    <div class=""></div>
+	    <!-- 点评 -->
+	    <div class=""></div>
+	    <!-- 具体行程 -->
+	    <div class=""></div>
+	    <button class="btn btn-succsee">立即预定</button>
 	</ion-content>
 </ion-view>

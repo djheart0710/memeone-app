@@ -1,4 +1,4 @@
-angular.module('lineModule', [])
+angular.module('lineModule', ['ui.bootstrap'])
 	.config(function($stateProvider, $urlRouterProvider) {
 		$stateProvider
 			.state('tab.line', {
